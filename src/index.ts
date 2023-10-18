@@ -9,7 +9,7 @@ const numalumnes = alumnes.length;
 
 app.get('/alumnes', (req: Request, res: Response) => res.json(alumnes));
 
-app.get('/total-alumnos', (req: Request, res: Response) => res.json(numalumnes));
+app.get('/numalumnes', (req: Request, res: Response) => res.json(numalumnes));
 
 app.listen(process.env.HOST_PORT, () => {
 	console.log(`⚡️[server]: Server is running at http://localhost:${port}!`);
