@@ -11,6 +11,11 @@ app.get('/alumnes', (req: Request, res: Response) => res.json(alumnes));
 
 app.get('/numalumnes', (req: Request, res: Response) => res.json(numalumnes));
 
+// eslint-disable-next-line arrow-body-style
+app.get('/', (req: Request, res: Response) => {
+	return res.send({alumnes, numalumnes});
+});
+
 app.listen(process.env.HOST_PORT, () => {
 	console.log(`⚡️[server]: Server is running at http://localhost:${port}!`);
 });
